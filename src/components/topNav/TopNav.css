@@ -1,0 +1,128 @@
+
+.top__nav{
+    position: fixed;
+    top: 0;
+    left: 260px;
+    background: var(--primary-color);
+    width: calc(100% - 260px);
+    height: 70px;
+    line-height: 70px;
+}
+
+@media screen and (max-width: 400px) {
+    .top__nav{
+        height: 135px;
+    }
+}
+
+.bars{
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .top__nav{
+      left: 0!important;
+      width: 100%;
+    }
+    .bars{
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 999!important;
+    }
+  }
+
+.top__nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+@media screen and (max-width: 400px) {
+    .top__nav-wrapper{
+        flex-direction: column-reverse;
+    }
+}
+
+.top__nav-right{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 400px) {
+    .top__nav-right{
+        /* background-color: pink; */
+        width: 100%;
+    }
+}
+
+.search__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    background: #0b0c28!important;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+}
+
+@media screen and (max-width: 400px) {
+    .search__box{
+        width: 100%;
+    }
+}
+
+.search__box input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--small-text-color);
+}
+
+.search__box input::placeholder{
+    color: var(--small-text-color);
+}
+
+.search__box span i{
+    color: var(--small-text-color);
+}
+
+.profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    object-fit: cover;
+}
+
+.notification i{
+    color: var(--small-text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.notification{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    top: 25%;
+    right: -10%;
+    font-size: 0.6rem;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+}
